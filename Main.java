@@ -12,7 +12,7 @@ public class Main {
         boolean quit = false;
         while (quit == false) {
             System.out.println("Hi, welcome to FridgeAppV1. Please type the keyword of what would you like to do.");
-            System.out.println("Would you like to input an item (input), remove an item (remove), print out current items in the fridge (print), or quit the program (quit)?");
+            System.out.println("Would you like to input an item (input), remove an item (remove), print out current items in the fridge (print), send current items in the fridge to a text file (file), or quit the program (quit)?");
             String reader = scan.nextLine();
             if (reader.equalsIgnoreCase("input")) {
                 System.out.println("What is the item's barcode (ex: 027000382493, Hunt's Ketchup)");
@@ -70,6 +70,10 @@ public class Main {
                 }
             } else if (reader.equalsIgnoreCase("quit")) {
                 quit = true;
+            } else if (reader.equalsIgnoreCase("file")) {
+                    System.out.println("What would you like your file name to be?");
+                    String fileName = scan.nextLine();
+                    fridge.writer(fileName);
             } else {
                 System.out.println("The response was invalid. Please choose one of the keywords available");
             }
