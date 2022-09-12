@@ -64,7 +64,15 @@ public class Database {
         }
     }
 
-
+    public void printAll () {
+        for (Integer iterator: map.keySet()) {
+            System.out.println("Item's Barcode: " + iterator +
+                    " Item's Brand Name: " + this.map.get(iterator).getBrandName() +
+                    " Item's Food Name: " + this.map.get(iterator).getFoodName() +
+                    " Items' Quantities: " + this.map.get(iterator).getQuantityList() +
+                    " Item's Expiration Dates: " + this.map.get(iterator).getExprList());
+        }
+    }
 
     // need to add item & barcode
 
