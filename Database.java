@@ -1,6 +1,5 @@
-import java.util.Date;
-import java.util.Map;
-import java.util.HashMap;
+import java.io.*;
+import java.util.*;
 
 public class Database {
     private final Map<Integer, Item> map;
@@ -74,6 +73,18 @@ public class Database {
         }
     }
 
+    public void writer(String fileName) throws IOException {
+        FileWriter fileWriter = new FileWriter(fileName);
+        PrintWriter printWriter = new PrintWriter(fileWriter);
+        for (Integer iterator: map.keySet()) {
+            printWriter.print("Item's Barcode: " + iterator +
+                    " Item's Brand Name: " + this.map.get(iterator).getBrandName() +
+                    " Item's Food Name: " + this.map.get(iterator).getFoodName() +
+                    " Items' Quantities: " + this.map.get(iterator).getQuantityList() +
+                    " Item's Expiration Dates: " + this.map.get(iterator).getExprList());
+            printWriter.close();
+        }
+    }
     // need to add item & barcode
 
 }
