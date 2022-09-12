@@ -1,5 +1,5 @@
-import java.io.*;
 import java.util.*;
+import java.io.*;
 
 public class Database {
     private final Map<Integer, Item> map;
@@ -56,20 +56,20 @@ public class Database {
         }
         else {
             System.out.println("Item's Barcode: " + barcode +
-                    " Item's Brand Name: " + this.map.get(barcode).getBrandName() +
-                    " Item's Food Name: " + this.map.get(barcode).getFoodName() +
-                    " Items' Quantities: " + this.map.get(barcode).getQuantityList() +
-                    " Item's Expiration Dates: " + this.map.get(barcode).getExprList());
+                    "\nItem's Brand Name: " + this.map.get(barcode).getBrandName() +
+                    "\nItem's Food Name: " + this.map.get(barcode).getFoodName() +
+                    "\nItems' Quantities: " + this.map.get(barcode).getQuantityList() +
+                    "\nItem's Expiration Dates: " + this.map.get(barcode).getExprList());
         }
     }
 
     public void printAll () {
         for (Integer iterator: map.keySet()) {
             System.out.println("Item's Barcode: " + iterator +
-                    " Item's Brand Name: " + this.map.get(iterator).getBrandName() +
-                    " Item's Food Name: " + this.map.get(iterator).getFoodName() +
-                    " Items' Quantities: " + this.map.get(iterator).getQuantityList() +
-                    " Item's Expiration Dates: " + this.map.get(iterator).getExprList());
+                    "\nItem's Brand Name: " + this.map.get(iterator).getBrandName() +
+                    "\nItem's Food Name: " + this.map.get(iterator).getFoodName() +
+                    "\nItems' Quantities: " + this.map.get(iterator).getQuantityList() +
+                    "\nItem's Expiration Dates: " + this.map.get(iterator).getExprList());
         }
     }
 
@@ -78,13 +78,16 @@ public class Database {
         PrintWriter printWriter = new PrintWriter(fileWriter);
         for (Integer iterator: map.keySet()) {
             printWriter.print("Item's Barcode: " + iterator +
-                    " Item's Brand Name: " + this.map.get(iterator).getBrandName() +
-                    " Item's Food Name: " + this.map.get(iterator).getFoodName() +
-                    " Items' Quantities: " + this.map.get(iterator).getQuantityList() +
-                    " Item's Expiration Dates: " + this.map.get(iterator).getExprList());
+                    "\nItem's Brand Name: " + this.map.get(iterator).getBrandName() +
+                    "\nItem's Food Name: " + this.map.get(iterator).getFoodName() +
+                    "\nItems' Quantities: " + this.map.get(iterator).getQuantityList() +
+                    "\nItem's Expiration Dates: " + this.map.get(iterator).getExprList());
             printWriter.close();
         }
     }
+
+
+
     // need to add item & barcode
 
 }
