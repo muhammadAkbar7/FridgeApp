@@ -60,13 +60,14 @@ public class Main {
                 fridge.remove(barcode);
             } else if (reader.equalsIgnoreCase("print")) {
                 System.out.println("Would you like to print an individual (in) item or all the items in your fridge (all)");
-                String itemChoice = scan.nextLine(); // need to add if for in & all / update
+                String itemChoice = scan.nextLine();
                 if (itemChoice.equalsIgnoreCase("in")) {
                     System.out.println("What is the item's barcode (ex: 027000382493, Hunt's Ketchup)");
                     int barcodeInitial = Integer.parseInt(scan.nextLine());
                     fridge.printIn(barcodeInitial);
                 } else {
-                } //update
+                    fridge.printAll();
+                }
             } else if (reader.equalsIgnoreCase("quit")) {
                 quit = true;
             } else {
