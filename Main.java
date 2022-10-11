@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.Scanner;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -6,7 +7,7 @@ import java.util.ArrayList;
 
 // Assumptions: all user input is free of errors
 public class Main {
-    public static void main (String[] args) {
+    public static void main (String[] args) throws IOException {
         Scanner scan = new Scanner(System.in);
         Database fridge = new Database();
         boolean quit = false;
