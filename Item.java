@@ -36,6 +36,10 @@ public class Item {
         return listString;
     }
 
+    public ArrayList getExprListNotString () {
+        return exprDateList;
+    }
+
     public boolean ItemQuantityAdd (int quantity) {
         this.quantityList.add(quantity);
         return true;

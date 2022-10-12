@@ -13,6 +13,7 @@ public class Main {
         boolean quit = false;
         while (quit == false) {
             System.out.println("Hi, welcome to FridgeAppV1. Please type the keyword of what would you like to do.");
+            fridge.itemExpr();
             System.out.println("Would you like to input an item (input), remove an item (remove), print out current items in the fridge (print), send current items in the fridge to a text file (file), or quit the program (quit)?");
             String reader = scan.nextLine();
             if (reader.equalsIgnoreCase("input")) {
@@ -81,4 +82,8 @@ public class Main {
                 System.out.println("");
         }
     }
+
+/*    public static void exprDate () {
+
+    }*/
 }

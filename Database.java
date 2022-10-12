@@ -86,6 +86,25 @@ public class Database {
         }
     }
 
+    public void itemExpr () {
+        Date objDate = new Date();
+        Scanner scan = new Scanner(System.in);
+        for (Integer iterator: map.keySet()) {
+            ArrayList exprListDates = this.map.get(iterator).getExprListNotString();
+            for (int i = 0; i < exprListDates.size(); i++) {
+                if(objDate.compareTo((Date) exprListDates.get(i)) > 0) {
+                    System.out.println("You have the following expired item: ");
+                    printIn(iterator);
+                    System.out.println("Would you like to remove it? ('y' for yes)");
+                    String response = scan.nextLine();
+                    if (response.equalsIgnoreCase("y")) {
+                        remove(iterator);
+                    }
+                }
+            }
+        }
+    }
+
 
 
     // need to add item & barcode
